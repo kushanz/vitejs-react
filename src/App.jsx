@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg';
 import Header from './layout/Header';
 import CoreConcept from './CoreConcept';
 import { CORE_CONCEPTS } from './data';
+import TabButton from './layout/TabButton';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,6 +27,14 @@ function App() {
               ></CoreConcept>
             ))}
           </ul>
+        </section>
+        <section id='examples'>
+          <menu>
+             <TabButton>Components</TabButton>
+             <TabButton>JSX</TabButton>
+             <TabButton>Props</TabButton>
+             <TabButton>State</TabButton>
+          </menu>
         </section>
       </main>
     </div>
