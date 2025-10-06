@@ -21,11 +21,7 @@ function App() {
           <h2>Core Concepts</h2>
           <ul>
             {CORE_CONCEPTS.map((item) => (
-              <CoreConcept
-                image={item.image}
-                title={item.title}
-                description={item.description}
-              ></CoreConcept>
+              <CoreConcept key={item.title} {...item}></CoreConcept>
             ))}
           </ul>
         </section>
