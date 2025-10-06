@@ -31,10 +31,10 @@ function App() {
         </section>
         <section id='examples'>
           <menu>
-             <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-             <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-             <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-             <TabButton onSelect={() => handleSelect('state')}>State</TabButton>
+             <TabButton isSelected={selectedTab==='components'} onSelect={() => handleSelect('components')}>Components</TabButton>
+             <TabButton isSelected={selectedTab==='jsx'} onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+             <TabButton isSelected={selectedTab==='props'} onSelect={() => handleSelect('props')}>Props</TabButton>
+             <TabButton isSelected={selectedTab==='state'} onSelect={() => handleSelect('state')}>State</TabButton>
           </menu>
           <div id='tab-content'>
             <h3>{EXAMPLES[selectedTab].title}</h3>
